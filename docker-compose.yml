@@ -1,0 +1,39 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    environment:
+      # Persist the SQLite DB on the named volume mounted at /data
+      SQLITE_PATH: ${SQLITE_PATH:-/data/storeintel.db}
+    ports:
+      - "8000:8000"
+    volumes:
+      - sqlite_data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import json,urllib.request,sys; d=json.load(urllib.request.urlopen('http://localhost:8000/health', timeout=2)); sys.exit(0 if d.get('database_status')=='ok' else 1)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: services/dashboard/Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "8501:8501"
+    environment:
+      # Ensure the dashboard talks to the API over the compose network
+      API_BASE_URL: ${API_BASE_URL:-http://api:8000}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501', timeout=2).read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  sqlite_data:
+

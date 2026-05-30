@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+data/
+*.db
+
+*.log
+videos/
+CCTV Footage/
+
+.vscode/
+.venv/
+.pytest_cache/
+__pycache__/
+
+detections.json
+tracks.json

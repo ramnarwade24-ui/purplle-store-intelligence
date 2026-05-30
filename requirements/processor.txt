@@ -1,0 +1,9 @@
+opencv-python-headless==4.10.0.84
+httpx==0.27.2
+numpy==2.0.2
+structlog==24.4.0
+pydantic-settings==2.4.0
+
+# ML stack (CPU-friendly by default; may be heavy)
+ultralytics==8.3.10
+supervision==0.22.0
