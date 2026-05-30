@@ -67,4 +67,18 @@ Run tests:
 =======
 # purplle-store-intelligence
 AI-powered Store Intelligence System for Purplle Tech Challenge 2026
+## Dashboard
 
+![Dashboard](docs/screenshots/dashboard.png)
+
+## API Documentation
+
+![Swagger](docs/screenshots/swagger.png)
+
+## Zone Heatmap
+
+![Heatmap](docs/screenshots/heatmap.png)
+
+## Health Monitoring
+
+![Health](docs/screenshots/health.png)
