@@ -29,7 +29,7 @@ docker compose up --build
 
 Endpoints:
 
-- API: http://localhost:8000 (docs at /docs)
+- API: http://localhost:8000/docs
 - Dashboard: http://localhost:8501
 
 ## Local dev (Windows)
