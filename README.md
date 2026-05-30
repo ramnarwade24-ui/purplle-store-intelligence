@@ -73,7 +73,7 @@ AI-powered Store Intelligence System for Purplle Tech Challenge 2026
 
 ## API Documentation
 
-![Swagger](docs/swagger.png)
+![Swagger](docs/Swagger.png)
 
 ## Zone Heatmap
 
