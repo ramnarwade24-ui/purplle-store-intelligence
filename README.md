@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Store Intelligence System
 
 Production-grade starter for a Store Intelligence System:
@@ -68,4 +67,4 @@ Run tests:
 =======
 # purplle-store-intelligence
 AI-powered Store Intelligence System for Purplle Tech Challenge 2026
->>>>>>> 5c5133df81642388de94719037218454fe208390
+
